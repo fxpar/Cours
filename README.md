@@ -1,11 +1,14 @@
 # Excel
 
-# Formules et outils
 
-https://www.youtube.com/watch?v=9L1wDUaOxiQ
-
-[![Formats et Formules de texte](https://i.ytimg.com/vi/9L1wDUaOxiQ/hqdefault.jpg)](
+[![Réussir un examen Excel](https://i.ytimg.com/vi/9L1wDUaOxiQ/hqdefault.jpg)](
 https://www.youtube.com/watch?v=9L1wDUaOxiQ)
+
+1. [Formules et outils](#formules-et-outils)
+3. [Présentation](#présentation)
+4. [Échange](#échange)
+
+# Formules et outils
 
 ## 🔤 Écrire : Les formules et astuces de Texte
 
@@ -21,6 +24,7 @@ https://www.youtube.com/watch?v=IsnqNWFZpeU)
 ### Remplissage instantané : 
 [![Remplissage instantané](https://i.ytimg.com/vi/3BI3j4y25OI/hqdefault.jpg)](
 https://www.youtube.com/watch?v=3BI3j4y25OI)
+
 ## 🔢 Compter : Les formules pour compter avec des conditions
 
 ### Compter avec critères : 
