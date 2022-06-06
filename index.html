@@ -37,10 +37,26 @@
             Menu
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+			<li><a class="dropdown-item" href="#carouselIntro">▶️ Intro</a></li>
+			<li><hr class="dropdown-divider"></li>
+			<li><a class="dropdown-item disabled" href="#">Formules et outils</a></li>
             <li><a class="dropdown-item" href="#carouselEcrire">🔤 Écrire</a></li>
             <li><a class="dropdown-item" href="#carouselCompter">🔢 Compter</a></li>
+            <li><a class="dropdown-item" href="#carouselPlanifier">📆 Planifier</a></li>
+            <li><a class="dropdown-item" href="#carouselColorier">🎨 Colorier</a></li>
+            <li><a class="dropdown-item" href="#carouselRelier">🪢 Relier</a></li>
+            <li><a class="dropdown-item" href="#carouselColorier">🔀 Décider</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item disabled" href="#">Présentation</a></li>
+			<li><a class="dropdown-item" href="#carouselOrganiser">🧱 Organiser</a></li>
+			<li><a class="dropdown-item" href="#carouselSynthetiser">💎 Synthétiser</a></li>
+			<li><a class="dropdown-item" href="#carouselVisualiser">📊 Visualiser</a></li>
+			<li><a class="dropdown-item" href="#carouselAnimer">👆 Animer</a></li>
+			<li><a class="dropdown-item" href="#carouselAutomatiser">⚙️ Automatiser</a></li>
+			<li><a class="dropdown-item disabled" href="#">Échanger</a></li>
+			<li><a class="dropdown-item" href="#carouselProteger">🔒 Protéger</a></li>
+			<li><a class="dropdown-item" href="#carouselImprimer">🖨️ Imprimer</a></li>
+			<li><a class="dropdown-item" href="#carouselImporter">♻️Importer Exporter</a></li>
           </ul>
         </li>
 		</ul>
@@ -107,35 +123,86 @@
 </div>
 
 
-<h1 class="display-3">Ce qu'il faut connaître</h1>
 
-<div class="card mt-2" style="">
+
+
+
+
+<!-- Carousel : Introduction -->
+<div id="carouselIntro" class="carousel slide mb-2  mt-3" data-bs-interval="false">
+
+  <div class="carousel-inner">
+  
+    <div class="carousel-item active" >
+		<div class="card  mt-2" style="">
 			<div class="card-body">
-				<h5 class="card-title">Réussir un exam sur Excel</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-			</div>
-
-			<div class="ratio ratio-16x9">
-				<iframe  src="https://www.youtube.com/embed/9L1wDUaOxiQ?rel=0" allowfullscreen></iframe>
+				<div class="bg-light p-5 rounded-lg mt-3">
+				  <h1 class="display-4">Ce qu'il faut connaître</h1>
+				  <p class="lead">Découvrir les grands chapitres à connaître pour être à l'aise dans Excel</p>
+				  <hr class="my-4">
+				  <p>Faites défiler chaque section vers la droite (swipe ou clic au bord) pour approfondir les notions.</p>
+				  <a class="btn btn-primary btn-lg" data-bs-target="#carouselIntro" data-bs-slide="next" href="#" role="button">faites-moi défiler (swype)</a>
+				</div>
 			</div>
 		</div>
+    </div>
+	
+	
+	
+	    <div class="carousel-item" >
+		<div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Réussir un examen d'Excel</h5>
+				<p class="card-text">Les grands thèmes à découvrir ou maîtriser pour bien préparer son exam.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">🗺️ Panorama</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/9L1wDUaOxi?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+    </div>
+	
+	
+
+	
+	
+
+	
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntro" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselIntro" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
 
 
 
 
 <!-- JUMBOTRON -->
-<div class="bg-light p-5 rounded-lg mt-3">
+<div class="bg-warning p-5 rounded-lg mt-3">
   <h1 class="display-4">Formules et outils</h1>
   <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
   <hr class="my-4">
   <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+  <a class="btn btn-primary btn-lg" href="#carouselEcrire" role="button">Et on descend!</a>
 </div>
 
 
-
+<!-- Carousel : écrire -->
 <div id="carouselEcrire" class="carousel slide mb-2  mt-3" data-bs-interval="false">
-<!-- Premier Carousel : formules -->
+
   <div class="carousel-inner">
   
     <div class="carousel-item active" >
@@ -149,8 +216,6 @@
 				  <a class="btn btn-primary btn-lg" data-bs-target="#carouselEcrire" data-bs-slide="next" href="#" role="button">faites-moi défiler (swype)</a>
 				</div>
 			</div>
-			
-
 		</div>
     </div>
 	
@@ -160,7 +225,7 @@
 		<div class="card  mt-2" style="">
 			<div class="card-body">
 				<h5 class="card-title">Formats et formules de TEXTE</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="card-text">Le cours complet sur les formules permettant de manipuler du texte et de le mettre en forme.</p>
 			</div>
 			<div class="card-footer"><span class="badge bg-secondary">🔤 Écrire</span></div>
 			<div class="ratio ratio-16x9">
@@ -174,7 +239,7 @@
       <div class="card  mt-2" style="">
 			<div class="card-body">
 				<h5 class="card-title">Séparer les données</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="card-text">D'autres outils que les formules peuvent vous aider à manipuler du texte. Ils sont vraiment à connaître.</p>
 			</div>
 			<div class="card-footer"><span class="badge bg-secondary">🔤 Écrire</span></div>
 			<div class="ratio ratio-16x9">
@@ -190,7 +255,7 @@
       	<div class="card mt-2" style="">
 			<div class="card-body">
 				<h5 class="card-title">Ramener sur une ligne</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="card-text">Le défi de toute personne qui a trouvé un listing en pdf et qui doit remettre des informations sur une ligne.</p>
 			</div>
 			<div class="card-footer"><span class="badge bg-secondary">🔤 Écrire</span></div>
 			<div class="ratio ratio-16x9">
@@ -204,7 +269,7 @@
       	<div class="card  mt-2" style="">
 			<div class="card-body">
 				<h5 class="card-title">Remplissage instantané</h5>
-				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				<p class="card-text">C'était il y a longtemps, avec un petit air de Samba.</p>
 			</div>
 			<div class="card-footer"><span class="badge bg-secondary">🔤 Écrire</span></div>
 			<div class="ratio ratio-16x9">
@@ -212,9 +277,6 @@
 			</div>
 		</div>
     </div>
-	
-	
-	
 	
 	
   </div>
@@ -230,7 +292,280 @@
 
 
 
-<h1 class="display-4">Présenter</h1>
+
+
+
+<!-- Carousel : Compter -->
+<div id="carouselCompter" class="carousel slide mb-2  mt-3" data-bs-interval="false">
+
+  <div class="carousel-inner">
+  
+    <div class="carousel-item active" >
+		<div class="card  mt-2" style="">
+			<div class="card-body">
+				<div class="bg-light p-5 rounded-lg mt-3">
+				  <h1 class="display-4">Compter</h1>
+				  <p class="lead">Toutes les formules pour additionner ou compter avec des critères.</p>
+				  <hr class="my-4">
+				  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+				  <a class="btn btn-primary btn-lg" data-bs-target="#carouselCompter" data-bs-slide="next" href="#" role="button">faites-moi défiler (swype)</a>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	
+	
+	    <div class="carousel-item" >
+		<div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Compter avec critères</h5>
+				<p class="card-text">Le cours complet sur les formules de calcul avec des critères.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">🔢 Compter</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/NOQAUYAm0OA?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+    </div>
+	
+	
+    <div class="carousel-item" >
+      <div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Compter sans doublons</h5>
+				<p class="card-text">Si vous avez une version d'Excel avec abonnement (Entreprise ou éducation) vous pouvez tester ces nouvelles formules.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">🔢 Compter</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/4J_Cx1IJ5-8?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+	  
+    </div>
+	
+	
+	
+    <div class="carousel-item">
+      	<div class="card mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Valeur Cible</h5>
+				<p class="card-text">Les défi de toute personne qui a trouvé un listing en pdf et qui doit remettre des informations sur une ligne.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">🔢 Compter</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/XbgIx5RR6C4?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+    </div>
+	
+	
+	    <div class="carousel-item">
+      	<div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">K€</h5>
+				<p class="card-text">C'était il y a longtemps, avec un petit air de Samba.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">🔢 Compter</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/BbBfDxxs8Ow?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+    </div>
+	
+	
+		    <div class="carousel-item">
+      	<div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Gestionnaire de scénario</h5>
+				<p class="card-text">Un très bel outil pour comparer les chiffres entre plusieurs variables.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">🔢 Compter</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/iI_1MUOn8vs?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+    </div>
+	
+	
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselCompter" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselCompter" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+
+<!-- Carousel : planifier -->
+<div id="carouselPlanifier" class="carousel slide mb-2  mt-3" data-bs-interval="false">
+
+  <div class="carousel-inner">
+  
+    <div class="carousel-item active" >
+		<div class="card  mt-2" style="">
+			<div class="card-body">
+				<div class="bg-light p-5 rounded-lg mt-3">
+				  <h1 class="display-4">Planifier</h1>
+				  <p class="lead">Pour s'occuper des plannings, des délais, des congés, vous avez besoin de maîtriser les outils concernant le temps. </p>
+				  <hr class="my-4">
+				  <p>Vous découvrirez ici toute un ensemble d'outil pour faciliter la mise en forme et les calculs sur les dates..</p>
+				  <a class="btn btn-primary btn-lg" data-bs-target="#carouselPlanifier" data-bs-slide="next" href="#" role="button">faites-moi défiler (swype)</a>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	
+	
+	    <div class="carousel-item" >
+		<div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Formats et formules de Date</h5>
+				<p class="card-text">Les bases pour maîtriser la mise en forme et formules de date.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">📆 Planifier</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/x3suisZRvOE?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+    </div>
+	
+	
+    <div class="carousel-item" >
+      <div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Les formules de la gestion de projets</h5>
+				<p class="card-text">Les formules pour faire des calculs sur les dates, donner un numéro de semaine, les âges et les jours ouvrés.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">📆 Planifier</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/B6gYVfBCz9A?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+	  
+    </div>
+	
+	
+
+	
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPlanifier" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselPlanifier" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Carousel : colorier -->
+<div id="carouselColorier" class="carousel slide mb-2  mt-3" data-bs-interval="false">
+
+  <div class="carousel-inner">
+  
+    <div class="carousel-item active" >
+		<div class="card  mt-2" style="">
+			<div class="card-body">
+				<div class="bg-light p-5 rounded-lg mt-3">
+				  <h1 class="display-4">Colorier</h1>
+				  <p class="lead">Mettre les cellules en couleurs en fonction de critères, voici ce que vous allez découvrir ici. </p>
+				  <hr class="my-4">
+				  <p>Cela vous permettra d'avoir des alertes visuelles quand quelque chose manque, ou qu'une date approche.</p>
+				  <a class="btn btn-primary btn-lg" data-bs-target="#carouselPlanifier" data-bs-slide="next" href="#" role="button">faites-moi défiler (swype)</a>
+				</div>
+			</div>
+		</div>
+    </div>
+	
+	
+	
+	    <div class="carousel-item" >
+		<div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Mise en forme conditionnelle</h5>
+				<p class="card-text">Cet outil de mise en forme contient de belles surprises et va vous permettre aussi de bien réviser les dollars.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">🎨 Colorier</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/kKpGaeCaHX8?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+    </div>
+	
+	
+    <div class="carousel-item" >
+      <div class="card  mt-2" style="">
+			<div class="card-body">
+				<h5 class="card-title">Décoration</h5>
+				<p class="card-text">Je vous livre tous mes secrets de mise en forme pour réussir vos tableaux de bors et personnaliser vos fichiers.</p>
+			</div>
+			<div class="card-footer"><span class="badge bg-secondary">🎨 Colorier</span></div>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/84Bxh4bBd0w?rel=0" allowfullscreen></iframe>
+			</div>
+		</div>
+	  
+    </div>
+	
+	
+
+	
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselColorier" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselColorier" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JUMBOTRON -->
+<div class="bg-danger text-white p-5 rounded-lg mt-3">
+  <h1 class="display-4">Présenter</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#carouselOrganiser" role="button">Et on descend!</a>
+</div>
+
 
 <div id="carouselExampleControls2" class="carousel slide mb-2  mt-3" data-bs-interval="false">
 <!-- Deuxième Carousel : présentation -->
