@@ -13,29 +13,46 @@
 </head>
 <body class="">
 
+<!-- permet de réduire à 50% sur ordinateur -->
 <div class="container ">
 
 
-<div class="collapse" id="navbarToggleoffcanvas">
-  <div class="bg-primary p-4">
-    <h5 class="text-white h4">Collapsed content</h5>
-    <span class="text-muted">Toggleable via the navbar brand.</span>
-  </div>
-</div>
-<nav class="navbar sticky-top navbar-light bg-light">
+
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
   <div class="container-fluid">
+
+	<a class="navbar-brand" href="#">Excel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+	
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+	
+		<div class="collapse navbar-collapse" id="navbarScroll">
+		 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+	        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#carouselEcrire">🔤 Écrire</a></li>
+            <li><a class="dropdown-item" href="#carouselCompter">🔢 Compter</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+		</ul>
+		</div>
   </div>
 </nav>
 
-<!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
-  Link with href
-</a>
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-  Button with data-bs-target
-</button> -->
+<!-- 
+* Dans offcanva, soit le lien referme le menu, soit il va à l'url
+* mais pas les deux
+* Quand on ajoute la drop down la barre latérale à disparu.
+-->
 
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
@@ -52,7 +69,7 @@
 			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#formules-collapse" aria-expanded="true">Formules et outils</button>
 			<div id="formules-collapse" class="collapse show" >
 				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a class="link-dark rounded" href="#">🔤 Écrire</a></li>
+					<li><a class="link-dark rounded" href="#carouselEcrire" >🔤 Écrire</a></li>
 					<li><a class="link-dark rounded" href="#">🔢 Compter</a></li>
 					<li><a class="link-dark rounded" href="#">📆 Planifier</a></li>
 					<li><a class="link-dark rounded" href="#">🎨 Colorier</a></li>
@@ -97,19 +114,49 @@
 				<h5 class="card-title">Réussir un exam sur Excel</h5>
 				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 			</div>
-			<div class="card-footer hidden"><span class="badge bg-secondary">🔤 Écrire</span></div>
+
 			<div class="ratio ratio-16x9">
 				<iframe  src="https://www.youtube.com/embed/9L1wDUaOxiQ?rel=0" allowfullscreen></iframe>
 			</div>
 		</div>
 
-<h1 class="display-4">Formules et outils</h1>
 
-<div id="carouselExampleControls1" class="carousel slide mb-2  mt-3" data-bs-interval="false">
+
+
+<!-- JUMBOTRON -->
+<div class="bg-light p-5 rounded-lg mt-3">
+  <h1 class="display-4">Formules et outils</h1>
+  <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+</div>
+
+
+
+<div id="carouselEcrire" class="carousel slide mb-2  mt-3" data-bs-interval="false">
 <!-- Premier Carousel : formules -->
   <div class="carousel-inner">
   
     <div class="carousel-item active" >
+		<div class="card  mt-2" style="">
+			<div class="card-body">
+				<div class="bg-light p-5 rounded-lg mt-3">
+				  <h1 class="display-4">Écrire</h1>
+				  <p class="lead">Tous les outils pour séparer, regrouper du texte, ajouter des majuscules ou minuscules...</p>
+				  <hr class="my-4">
+				  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+				  <a class="btn btn-primary btn-lg" data-bs-target="#carouselEcrire" data-bs-slide="next" href="#" role="button">faites-moi défiler (swype)</a>
+				</div>
+			</div>
+			
+
+		</div>
+    </div>
+	
+	
+	
+	    <div class="carousel-item" >
 		<div class="card  mt-2" style="">
 			<div class="card-body">
 				<h5 class="card-title">Formats et formules de TEXTE</h5>
@@ -121,7 +168,6 @@
 			</div>
 		</div>
     </div>
-	
 	
 	
     <div class="carousel-item" >
@@ -172,11 +218,11 @@
 	
 	
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselEcrire" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselEcrire" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
@@ -184,7 +230,7 @@
 
 
 
-<h1 class="display-4">Présentation</h1>
+<h1 class="display-4">Présenter</h1>
 
 <div id="carouselExampleControls2" class="carousel slide mb-2  mt-3" data-bs-interval="false">
 <!-- Deuxième Carousel : présentation -->
