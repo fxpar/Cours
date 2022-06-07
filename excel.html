@@ -18,109 +18,46 @@
 
 
 
-<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
-  <div class="container-fluid">
 
-	<a class="navbar-brand" href="#">Excel</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="navbar sticky-top navbar-light bg-light">
 	
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-	
-		<div class="collapse navbar-collapse" id="navbarScroll">
-		 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-	        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Menu
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-			<li><a class="dropdown-item" href="#carouselIntro">▶️ Intro</a></li>
-			<li><hr class="dropdown-divider"></li>
-			<li><a class="dropdown-item disabled" href="#">Formules et outils</a></li>
-            <li><a class="dropdown-item" href="#carouselEcrire">🔤 Écrire</a></li>
-            <li><a class="dropdown-item" href="#carouselCompter">🔢 Compter</a></li>
-            <li><a class="dropdown-item" href="#carouselPlanifier">📆 Planifier</a></li>
-            <li><a class="dropdown-item" href="#carouselColorier">🎨 Colorier</a></li>
-            <li><a class="dropdown-item" href="#carouselRelier">🪢 Relier</a></li>
-            <li><a class="dropdown-item" href="#carouselDecider">🔀 Décider</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item disabled" href="#">Présentation</a></li>
-			<li><a class="dropdown-item" href="#carouselOrganiser">🧱 Organiser</a></li>
-			<li><a class="dropdown-item" href="#carouselSynthetiser">💎 Synthétiser</a></li>
-			<li><a class="dropdown-item" href="#carouselVisualiser">📊 Visualiser</a></li>
-			<li><a class="dropdown-item" href="#carouselAnimer">👆 Animer</a></li>
-			<li><a class="dropdown-item" href="#carouselAutomatiser">⚙️ Automatiser</a></li>
-			<li><a class="dropdown-item disabled" href="#">Échanger</a></li>
-			<li><a class="dropdown-item" href="#carouselProteger">🔒 Protéger</a></li>
-			<li><a class="dropdown-item" href="#carouselImprimer">🖨️ Imprimer</a></li>
-			<li><a class="dropdown-item" href="#carouselImporter">♻️Importer Exporter</a></li>
-          </ul>
-        </li>
-		</ul>
-		</div>
-  </div>
-</nav>
+	  <div class="container-xxl">
+		<a class="navbar-brand dropdown-toggle " id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Excel</a>
 
-<!-- 
-* Dans offcanva, soit le lien referme le menu, soit il va à l'url
-* mais pas les deux
-* Quand on ajoute la drop down la barre latérale à disparu.
--->
 
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Excel</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <div>
-      Liste des talents à découvrir dans un examen Excel
-    </div>
-	<br/>
-	<ul class="list-unstyled ps-0">
-		<li class="mb-1">
-			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#formules-collapse" aria-expanded="true">Formules et outils</button>
-			<div id="formules-collapse" class="collapse show" >
-				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a class="link-dark rounded" href="#carouselEcrire" >🔤 Écrire</a></li>
-					<li><a class="link-dark rounded" href="#">🔢 Compter</a></li>
-					<li><a class="link-dark rounded" href="#">📆 Planifier</a></li>
-					<li><a class="link-dark rounded" href="#">🎨 Colorier</a></li>
-					<li><a class="link-dark rounded" href="#">🪢 Relier</a></li>
-					<li><a class="link-dark rounded" href="#">🔀 Décider</a></li>
-				</ul>
-			</div>
-		</li>
-		<li class="border-top my-3"></li>
-		<li class="mb-1">
-			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#presentation-collapse" aria-expanded="false">Présentation</button>
-			<div id="presentation-collapse" class="collapse" >
-				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a class="link-dark rounded" href="#">🧱 Organiser</a></li>
-					<li><a class="link-dark rounded" href="#">💎 Synthétiser</a></li>
-					<li><a class="link-dark rounded" href="#">👆 Animer</a></li>
-					<li><a class="link-dark rounded" href="#">⚙️ Automatiser</a></li>
-				</ul>
-			</div>
-		</li>
-		<li class="border-top my-3"></li>
-		<li class="mb-1">
-			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#echange-collapse" aria-expanded="false">Présentation</button>
-			<div id="echange-collapse" class="collapse" >
-				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-					<li><a class="link-dark rounded" href="#">🔒 Protéger</a></li>
-					<li><a class="link-dark rounded" href="#">🖨️ Imprimer</a></li>
-					<li><a class="link-dark rounded" href="#">♻️ Importer Exporter</a></li>
-				</ul>
-			</div>
-		</li>
-	</ul>
-   
-  </div>
-</div>
+			  <ul class="dropdown-menu dropdown-menu-end"  aria-labelledby="navbarDropdownMenuLink">
+				<li><a class="dropdown-item" href="#carouselIntro">▶️ Intro</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item disabled" href="#">Formules et outils</a></li>
+					<li><a class="dropdown-item" href="#carouselEcrire">🔤 Écrire</a></li>
+					<li><a class="dropdown-item" href="#carouselCompter">🔢 Compter</a></li>
+					<li><a class="dropdown-item" href="#carouselPlanifier">📆 Planifier</a></li>
+					<li><a class="dropdown-item" href="#carouselColorier">🎨 Colorier</a></li>
+					<li><a class="dropdown-item" href="#carouselRelier">🪢 Relier</a></li>
+					<li><a class="dropdown-item" href="#carouselDecider">🔀 Décider</a></li>
+					<li><hr class="dropdown-divider"></li>
+					<li><a class="dropdown-item disabled" href="#">Présentation</a></li>
+					<li><a class="dropdown-item" href="#carouselOrganiser">🧱 Organiser</a></li>
+					<li><a class="dropdown-item" href="#carouselSynthetiser">💎 Synthétiser</a></li>
+					<li><a class="dropdown-item" href="#carouselVisualiser">📊 Visualiser</a></li>
+					<li><a class="dropdown-item" href="#carouselAnimer">👆 Animer</a></li>
+					<li><a class="dropdown-item" href="#carouselAutomatiser">⚙️ Automatiser</a></li>
+					<li><a class="dropdown-item disabled" href="#">Échanger</a></li>
+					<li><a class="dropdown-item" href="#carouselProteger">🔒 Protéger</a></li>
+					<li><a class="dropdown-item" href="#carouselImprimer">🖨️ Imprimer</a></li>
+					<li><a class="dropdown-item" href="#carouselImporter">♻️Importer Exporter</a></li>
+			  </ul>
+
+
+	  </div>
+  </nav>
+
+
+
+
+
+
+
 
 
 
