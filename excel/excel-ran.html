@@ -1,0 +1,641 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+<script>
+$(document).ready(function() {
+ // executes when HTML-Document is loaded and DOM is ready
+console.log("document is ready");
+  
+  
+    $('[data-toggle="offcanvas"], #navToggle').on('click', function () {
+    $('.offcanvas-collapse').toggleClass('open')
+  })
+  
+  
+// document ready  
+});
+
+
+window.onload = function() {
+ // executes when complete page is fully loaded, including all frames, objects and images
+console.log("window is loaded");
+  
+  
+// window load  
+};
+
+
+
+
+
+</script>
+
+<style>
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+/* since the navbar is fixed we need to add some space to the body */
+body {
+  padding-top: 56px;
+}
+
+
+
+
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    right: 100%;
+    left:-300px;
+    width: 300px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition-timing-function: ease-in-out;
+    transition-duration: .3s;
+    transition-property: left, visibility;
+  }
+
+  .offcanvas-collapse {
+      align-items:start;
+/*   Adds a subtle drop shadow   */
+    			-moz-background-clip: padding;     /* Firefox 3.6 */
+			-webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+			background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+    border-right:5px solid rgba(0, 0, 0, 0.2);
+    
+  }
+
+
+
+
+/* Makes the nav visibile with the open class */
+  .offcanvas-collapse.open {
+    left: 0;
+    visibility: visible;
+  }
+
+
+.navbar-expand-lg .navbar-nav {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+<link href="css/sidebar.css" rel="stylesheet">
+	<style>
+		@media (min-width:1025px) { body { width: 50% !important; margin-left:25vw !important;} }
+	</style>
+</head>
+<body class="">
+
+<!-- permet de réduire à 50% sur ordinateur -->
+<div class="container ">
+
+<!-- NAVBAR -->
+<section class="bg-primary">
+  <div class="container">
+
+
+<!--  START NAVBAR   -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark navbar-offcanvas">
+      
+      
+<!--     If you want to show the button online on mobile use this toggle   
+      
+      <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+-->
+      
+<!--      This toggle button is always visible  -->
+     <button class="navbar-toggler d-block" type="button" id="navToggle">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <div class="navbar-collapse offcanvas-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Dashboard <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Notifications</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Switch account</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+ 
+        
+      </div>
+    </nav>
+<!--  END NAVBAR   -->
+
+  </div>
+  <!--/.container    -->
+
+</section>
+
+<!-- TITRE et badges -->
+<section>
+<!-- JUMBOTRON -->
+
+<div class="bg-light p-5 rounded-lg mt-3" id="sectionVBA">
+    <h1 class="display-3 fluid">Remise à niveau Excel</h1>
+    <p class="lead">Gagnez vos badges sur le tableur le plus utilisé au monde!</p>
+    <hr class="my-4">
+    <p>Toutes les astuces pour réussir en marketing, en management ou en finance.</p>
+    <a class="btn btn-primary btn-lg d-none" href="vba-dcg-sig-ue8.html" role="button">François Parlant!</a>
+
+    <div class="display-4">
+
+	<span class="badge badge-dark"  data-toggle="tooltip" data-html="true" title="<b>Durée totale</b> du parcours">⏱️ 6h</span> <span class="badge badge-dark" data-toggle="tooltip" data-html="true" title="Nombre de <b>notions clés</b> présentées">💎 20</span> <span class="badge badge-dark" data-toggle="tooltip" data-html="true" title="Nombre de <b>cas pratiques</b>">🧩 8</span>
+        <span class="badge badge-dark" data-toggle="tooltip" data-html="true" title="Nombred'<b>évaluations</b>">🎯 4</span>
+    </div>
+</div>
+</section>
+
+<!-- Carousel badge parcours -->
+<section>
+<p><br></p>
+<p><br></p>
+
+
+<div id="carouselBadges" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators ">
+        <li data-target="#carouselBadges" data-slide-to="0" class=""></li>
+        <li data-target="#carouselBadges" data-slide-to="2" class=""></li>
+        <li data-target="#carouselBadges" data-slide-to="4" class=""></li>
+        <li data-target="#carouselBadges" data-slide-to="6" class=""></li>
+        <li data-target="#carouselBadges" data-slide-to="8" class=""></li>
+        <li data-target="#carouselBadges" data-slide-to="10" class=""></li>
+        <li data-target="#carouselBadges" data-slide-to="12" class=""></li>
+
+    </ol>
+    <div class="carousel-inner">
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 bg-danger " src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/ecrire.svg" alt="Ecrire">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 ">Écrire</h5>
+                        <div class="lead">Les fonctions de texte.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-danger" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/compter.svg" alt="Compter">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Compter</h5>
+                        <div class="card-text lead">Les fonctions de calcul avec critères.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-danger" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/planifier.svg" alt="planifier">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Planifier</h5>
+                        <div class="card-text lead">Les formules de date et d'agendas..</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-danger" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/colorier.svg" alt="colorier">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Colorier</h5>
+                        <div class="card-text lead">Les mises en forme conditionnelles.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-danger" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/relier.svg" alt="relier">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Relier</h5>
+                        <div class="card-text lead">Les formules de recherche.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-danger" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/decider.svg" alt="decider">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Décider</h5>
+                        <div class="card-text lead">Les formules pour choisir entre plusieurs possibilités.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-warning" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/organiser.svg" alt="organiser">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Organiser</h5>
+                        <div class="card-text lead">Bien ranger les données pour être efficace.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-warning" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/synthetiser.svg" alt="synthetiser">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Synthétiser</h5>
+                        <div class="card-text lead">Résumer les informations pour prendre de bonnes décisions.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-warning" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/visualiser.svg" alt="visualiser">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Visualiser</h5>
+                        <div class="card-text lead">Créer des graphiques pertinents pour afficher vos données.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-warning" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/animer.svg" alt="animer">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Animer</h5>
+                        <div class="card-text lead">Ajouter de l'interactivité à vos tableaux de bord.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-warning" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/automatiser.svg" alt="automatiser">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Automatiser</h5>
+                        <div class="card-text lead">Répéter rapidement les actions pour faciliter l'utilisation du classeur.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-info" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/proteger.svg" alt="proteger">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Protéger</h5>
+                        <div class="card-text lead">Sécuriser vos feuilles pour que les formules ne se cassent pas.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-info" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/imprimer.svg" alt="imprimer">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Imprimer</h5>
+                        <div class="card-text lead">Préparer l'impression papier ou pdf pour un rendu professionnel.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="carousel-item">
+            <div class="container">
+                <div class="row bg-light">
+                    <img class="col-md-4 mr-3 bg-info" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/257525101/importer.svg" alt="importer">
+                    <div class="media-body col-md-8 align-self-center ">
+                        <h5 class="display-4 mt-0">Importer / Exporter</h5>
+                        <div class="card-text lead">Gérez les différents formats pour recevoir et transmettre les données.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselBadges" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+    <a class="carousel-control-next" href="#carouselBadges" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<p><br></p>
+<p><br></p>
+
+</section>
+
+
+<!-- Accordion: parcours + manuels + choix sujet -->
+<section>
+<br>
+<div class="accordion" id="accordion">
+    <div class="card">
+        <div class="card-header " id="headingOne">
+
+            <button class="btn btn-link d-flex align-items-center" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"><h4 class="mb-0 d-inline-block">Découvre le parcours</h4>
+        </button>
+
+        </div>
+
+        <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="">
+            <div class="card-body">
+                <img class="img img-fluid" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/944036050/R%C3%A9ussir%20un%20examen%20Excel%20light.png" alt="" role="presentation">
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <h4 class="d-inline">Obtient les Manuels en ligne</h4>
+        </button>
+            </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="">
+            <div class="card-body">
+
+
+                <p>Scholarvox héberge les manuels en ligne du niveau débutant au niveau expert</p>
+
+
+                <div class="card-deck">
+                    <div class="card">
+                        <a href="https://scholarvox.library.omneseducation.com/catalog/book/docid/88875337">
+                        <img class="card-img-top" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/944036050/9782100803415.jpg" style="max-height:380px" alt="Card image cap">
+                      </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Découvrir</h5>
+                            <p class="card-text">Le manuel pour s'initier à Excel et construire des fondations solides.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-primary" href="https://scholarvox.library.omneseducation.com/catalog/book/docid/88875337">⭐ Excel pratique</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <a href="https://scholarvox.library.omneseducation.com/catalog/book/docid/88857996">
+                        <img class="card-img-top" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/944036050/9782806264701.jpg" style="max-height:380px" alt="Card image cap">
+                      </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Approfondir</h5>
+                            <p class="card-text">On avance avec l'utilisation des outils et les formules les plus fréquentes.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-primary" href="https://scholarvox.library.omneseducation.com/catalog/book/docid/88857996">⭐⭐ Excel 50 minutes</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <a href="https://scholarvox.library.omneseducation.com/catalog/book/docid/88819046">
+                        <img class="card-img-top" src="https://pedago-bs.campusonline.me/draftfile.php/72046/user/draft/944036050/9782212257007.jpg" style="max-height:380px" alt="Card image cap">
+                      </a>
+                        <div class="card-body">
+                            <h5 class="card-title">Maîtriser</h5>
+                            <p class="card-text">Toujours plus haut, on met en place de vrais outils de gestion.</p>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-primary" href="https://scholarvox.library.omneseducation.com/catalog/book/docid/88819046">⭐⭐⭐ Excel Expert</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+                <button class="btn btn-link d-flex align-items-center collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <h4 class="d-inline">Choisis ton sujet</h4>
+        </button>
+            </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="">
+            <div class="card-body">
+                <!-- début tabs -->
+
+
+                <p><br></p>
+                <div class="card-header">
+                    <ul class="nav nav-pills card-header-pills" style="list-style-type: none;">
+                        <li class="nav-item">
+                            <a class="nav-link  active show" data-toggle="tab" href="#menu1">Management</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#menu2">Marketing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#menu3">Finance</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="tab-content border-left border-right border-bottom p-3">
+                    <div id="menu1" class="tab-pane fade in active show">
+                        <h3 class="display-4">Gestion des ventes</h3>
+                        <p class="lead">Un délicieux exercice de suivi des ventes pour accompagner la direction de votre région.</p>
+                        <button class="btn btn-success">Sujet</button> <button class="btn btn-border-success">Corrigé</button>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3 class="display-4">Suivi des followers</h3>
+                        <p class="lead">créez un reporting d'activité sur les réseaux sociaux.</p>
+                        <button class="btn btn-primary">Sujet</button> <button class="btn btn-border-primary">Corrigé</button>
+                    </div>
+                    <div id="menu3" class="tab-pane fade ">
+                        <h3 class="display-4">Gestion de trésorerie</h3>
+                        <p class="lead">Ton entreprise va-t-elle fonctionner si certaines rentrées d'argent son différées?</p>
+                        <button class="btn btn-secondary">Sujet</button> <button class="btn btn-border-secondary">Corrigé</button>
+                    </div>
+
+                </div>
+
+
+                <!-- fin des tabs -->
+
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Autres cours -->
+<section>
+<div class="container">
+    <h2 class="display-4">Les autres cours qui pourraient t'intéresser</h2>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title lead">PowerBI</h5>
+                    <p class="card-text">Pour aller encore plus loin qu'Excel dans la visualisation des données.</p>
+                    <a href="#" class="btn btn-primary">Démarrer</a>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Auteur: François Parlant</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title lead">Power Automate</h5>
+                    <p class="card-text">Enchainer automatiquement des actions entre tous tes logiciels.</p>
+                    <a href="#" class="btn btn-primary">Démarrer</a>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">Auteur: François Parlant</small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+
+
+
+</div>
+
+
+</body>
+</html>
