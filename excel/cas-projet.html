@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="css/sidebar.css" rel="stylesheet">
+	<style>
+		@media (min-width:1025px) { body { width: 50% !important; margin-left:25vw !important;} }
+	</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+<body class="">
+
+
+<!-- permet de réduire à 50% sur ordinateur -->
+<div class="container ">
+
+<div class="collapse" id="navbarToggleoffcanvas">
+  <div class="bg-primary p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+  </div>
+</div>
+<nav class="navbar sticky-top navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Link with href
+</a>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Button with data-bs-target
+</button> -->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Excel</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Liste des talents à découvrir dans un examen Excel
+    </div>
+	<br/>
+	<ul class="list-unstyled ps-0">
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#formules-collapse" aria-expanded="true">Formules et outils</button>
+			<div id="formules-collapse" class="collapse show" >
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a class="link-dark rounded" href="#carouselCommuniquer">Communiquer</a></li>
+					<li><a class="link-dark rounded" href="#carouselMotiver">Motiver</a></li>
+					<li><a class="link-dark rounded" href="#">Planifier</a></li>
+					<li><a class="link-dark rounded" href="#">Colorier</a></li>
+					<li><a class="link-dark rounded" href="#">Relier</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="border-top my-3"></li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#presentation-collapse" aria-expanded="false">Présentation</button>
+			<div id="presentation-collapse" class="collapse" >
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a class="link-dark rounded" href="#">Organiser</a></li>
+					<li><a class="link-dark rounded" href="#">Synthétiser</a></li>
+					<li><a class="link-dark rounded" href="#">Visualiser</a></li>
+					<li><a class="link-dark rounded" href="#">Animer</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+   
+  </div>
+</div>
+<!-- fin navbar -->
+
+
+
+
+<!-- JUMBOTRON -->
+<div class="bg-primary text-white p-5 rounded-lg mt-3">
+  <h1 class="display-4">Cas projet</h1>
+  <p class="lead">Un exemple d'examen Excel pour les Master et MBA.</p>
+  <hr class="my-4">
+  <p>Démontrez votre capacité à manipuler et croiser les données.</p>
+  <a class="btn btn-light btn-lg" href="cas-projets.xlsx" role="button"><i class="fa fa-download"></i>Téléchargez le fichier</a>
+</div>
+
+
+
+
+<!-- JUMBOTRON -->
+<div class="bg-light p-5 rounded-lg mt-3">
+  <h1 class="display-4">Convertissez les numéros de projet</h1>
+  <p class="lead">Utilisez une formule pour transformer les numéros des projet en véritable "code projet".</p>
+  <hr class="border-light my-4">
+  <p>Regardez dans la feuille "projet", vous devriez obtenir quelque choses de similaire.</p>
+ 
+ <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Indice
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Pour convertir un numéro en texte formaté</strong> vous pouvez utiliser la merveilleuse fonction <code>TEXT(number,"format")</code> qui fera tout le travail. Elle adaptera le nombre de zéro à la taille du nombre.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Solution
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <p></p><strong>Comme ici le code est simple, vous pouvez utiliser: </strong><code>=TEXT(number,"P00000")</code> pour créer le code du projet.</p>
+		<p>Si le code avait été plus complexe, une concaténation en dehors de Texte aurait été préférable: <code>="P"&amp;TEXT(number,"00000")</code> </p>
+      </div>
+    </div>
+  </div>
+
+</div>
+ 
+
+
+
+
+
+
+</div> <!-- fin .container -->
+</body>
+</html>
