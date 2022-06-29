@@ -1,0 +1,378 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+<link href="css/sidebar.css" rel="stylesheet">
+	<style>
+		@media (min-width:1025px) { body { width: 50% !important; margin-left:25vw !important;} }
+	</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+<body class="">
+
+
+<!-- permet de réduire à 50% sur ordinateur -->
+<div class="container container-fluid">
+
+
+<nav class="navbar sticky-top navbar-light bg-light">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Link with href
+</a>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+  Button with data-bs-target
+</button> -->
+
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">PowerBi Desktop</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body ">
+    <div>
+      Liste des talents à découvrir dans un examen Excel
+    </div>
+	<br/>
+	<ul class="list-unstyled ps-0">
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded" data-bs-toggle="collapse" data-bs-target="#formules-collapse" aria-expanded="true">Formules et outils</button>
+			<div id="formules-collapse" class="collapse show" >
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a class="link-dark rounded" href="#carouselCommuniquer">Communiquer</a></li>
+					<li><a class="link-dark rounded" href="#carouselMotiver">Motiver</a></li>
+					<li><a class="link-dark rounded" href="#">Planifier</a></li>
+					<li><a class="link-dark rounded" href="#">Colorier</a></li>
+					<li><a class="link-dark rounded" href="#">Relier</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="border-top my-3"></li>
+		<li class="mb-1">
+			<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#presentation-collapse" aria-expanded="false">Présentation</button>
+			<div id="presentation-collapse" class="collapse" >
+				<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a class="link-dark rounded" href="#">Organiser</a></li>
+					<li><a class="link-dark rounded" href="#">Synthétiser</a></li>
+					<li><a class="link-dark rounded" href="#">Visualiser</a></li>
+					<li><a class="link-dark rounded" href="#">Animer</a></li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+   
+  </div>
+</div>
+<!-- fin navbar -->
+
+
+
+
+<!-- JUMBOTRON -->
+<div class="bg-primary text-white p-2 p-md-5 rounded-lg mt-3">
+  <h1 class="display-4">PowerBi</h1>
+  <p class="lead">Les ressources pour se former à l'outil de visualisation des données de Microsoft.</p>
+  <hr class="my-4">
+  <p>Apprnez avec les meilleur.e.s à importer des données, les nettoyer, créer des tableaux de bord pertinents et interactifs.</p>
+  <a class="btn btn-light btn-lg d-none" href="cas-projets.xlsx" role="button"><i class="fa fa-download"></i>Téléchargez le fichier</a>
+</div>
+
+<div class="fs-2">
+<i class="bi-linkedin p-3"></i>
+<i class="bi-twitter p-3"></i>
+<i class="bi-facebook p-3"></i>
+<i class="bi-telegram p-3"></i>
+</div>
+
+
+<!-- JUMBOTRON -->
+<div class="bg-light p-2 p-md-5 rounded-lg mt-3">
+  <h1 class="display-4">Les tutos du prof</h1>
+  <p class="lead">Vous trouverez ici quelques unes de mes vidéos pour apprendre à manipuler PowerBi.</p>
+  <hr class="border-light my-4">
+  <p>Dépliez les différents niveaux en fonction de vos besoins.</p>
+ 
+ <!-- Début accordion -->
+ <div class="accordion w-100 p-0" id="accordionTutos">
+ 
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTutosOne" aria-expanded="false" aria-controls="collapseTutosOne">
+        Intros et démos rapides
+      </button>
+    </h2>
+    <div id="collapseTutosOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="">
+      <div class="accordion-body p-0 p-md-5">
+			
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/ojTZL4JZOLc?rel=0" allowfullscreen></iframe>
+			</div>
+			<br>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/QEUonTl1j3I?rel=0" allowfullscreen></iframe>
+			</div>
+			
+			<h4>Sans payer</h4>
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/ts__yVKe8CY?rel=0" allowfullscreen></iframe>
+			</div>
+
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTutosTwo" aria-expanded="false" aria-controls="collapseTutosTwo">
+        Cours complet
+      </button>
+    </h2>
+    <div id="collapseTutosTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="">
+      <div class="accordion-body p-0 p-md-5">
+			
+			<div class="ratio ratio-16x9">
+				<iframe  src="https://www.youtube.com/embed/pW-9qOtkSHc?rel=0" allowfullscreen></iframe>
+			</div>
+      </div>
+	</div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTutosThree" aria-expanded="false" aria-controls="collapseTutosThree">
+        Formules Dax
+      </button>
+    </h2>
+    <div id="collapseTutosThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="">
+      <div class="accordion-body w-100 p-0">
+			
+			
+			<ul class="list-group list-group-flush w-100 p-0 ">
+			<li class="list-group-item">
+				<details>
+				<summary>Des champs calculés aux Dax</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/IztRc_4yi0Y?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Gammes et seuils</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/q74LcE33GS8?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Mesure Dax</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/WjVAiaCMqsk?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			</ul>
+			
+			
+      </div>
+  </div>
+
+</div>
+
+  <div class="accordion-item ">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTutosFour" aria-expanded="false" aria-controls="collapseTutosFour">
+        Outils et techniques
+      </button>
+    </h2>
+    <div id="collapseTutosFour" class="accordion-collapse collapse " aria-labelledby="headingFour" data-bs-parent="">
+      <div class="accordion-body w-100 p-0 m-2">
+        
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item">
+				<details>
+				<summary>Importer un dossier</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/IztRc_4yi0Y?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Créer une table</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/vLVxnz6egCQ?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Connexion Sharepoint</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/7ZGNLJyVzz4?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Connexion Google Sheet</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/eNg8X9KHW5g?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Analysez vos questionnaires Google</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/ZXk3T0izEqw?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Créer des Hiérarchies</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/6OQ2knNS46U?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Boutons bascule</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/IyyKsrCegm0?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Conversion taux de change</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/oA7nLnsA0FU?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Actualiser depuis Excel</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/uZLxgKr4mlI?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>
+			<li class="list-group-item">
+				<details>
+				<summary>Actualiser éditeur avancé</summary>
+					<div class="ratio ratio-16x9">
+						<iframe  src="https://www.youtube.com/embed/VgPpBFTEbFI?rel=0" allowfullscreen></iframe>
+					</div>
+				</details>
+			</li>			
+		</ul>
+		
+      </div>
+    </div>
+  
+  </div>
+  
+  </div>
+<!-- fin accordion -->
+ 
+ </div>
+ <!-- fin jumbotron -->
+ 
+ 
+ 
+<!-- JUMBOTRON -->
+<div class="bg-warning p-2 p-md-5 rounded-lg mt-3">
+  <h1 class="display-4">Le Blog à suivre</h1>
+  <p class="lead">Depuis la création de powerbi, l'équipe de développement fait une vidéo de 10 minutes chaque mois avec les nouveautés.</p>
+  <hr class="border-light my-4">
+  <p>Toujours construit sur la même structure, ces pages sont une mines pour comprendre l'évolution du logiciel.</p>
+  <a href="https://powerbi.microsoft.com/fr-ca/blog/power-bi-desktop-october-feature-summary/">
+  <img class="img img-fluid" src="./media/summary-features-mobile.png"/>
+  </a>
+</div>
+
+
+<!-- JUMBOTRON -->
+<div class="bg-light p-2 p-md-5 rounded-lg mt-3">
+  <h1 class="display-4">Les fichiers exemples</h1>
+  <p class="lead">Le répertoire github où l'équipe PowerBi dépose ses fichiers exemples.</p>
+  <hr class="border-light my-4">
+  <p>Ce dossier était un peu plus fourni à une certaine époque, mais vous trouverez des exemples sur les formules DAX.</p>
+  <a href="https://github.com/microsoft/powerbi-desktop-samples">
+  <img class="img img-fluid" src="./media/samples-github-mobile.png"/>
+  </a>
+  
+  <p class="alert alert-light">les anciens fichiers ont été supprimés. Vous pouvez en retrouver la trace dans <a class="btn btn-light btn-sm" href="https://github.com/microsoft/powerbi-desktop-samples/commit/b013064e9abb82e46836e2deec6485bfa4dfe592">ce commit</a></p>
+</div>
+
+
+
+<!-- JUMBOTRON -->
+<div class="bg-dark text-white p-2 p-md-5 rounded-lg mt-3">
+  <h1 class="display-4">Les supports d'ateliers</h1>
+  <p class="lead">Téléchargez les fichiers pour les formations "partenaires" PowerBi (profs et participants.</p>
+  <hr class="border-light my-4">
+  <p>Remplissez le formulaire en indiquant que vous avez une formation demain... et vous obtiendrez le contenus complet avec powerpoint commentés et fichiers examples corrigés.</p>
+  <a href="https://powerbi.microsoft.com/fr-fr/instructor-led-training/" class="btn btn-warning">
+  Récupérer les supports
+  </a>
+</div>
+
+
+
+<!-- JUMBOTRON -->
+<div class="bg-light p-2 p-md-5 rounded-lg mt-3">
+  <a href="https://docs.microsoft.com/fr-fr/power-bi/create-reports/service-goals-introduction"> <img class="img img-fluid" src="./media/power-bi-metrics-hub.png"/></a>
+  <h1 class="display-4">Références et avant-premières</h1>
+  <p class="lead">La documentation de PowerBi en français s'est énormément étoffée ces derniers mois.</p>
+  <hr class="border-light my-4">
+  <p>Vous trouverez de nombreuses rubriques très utiles pour les commerciaux.</p>
+
+<p> <a class="btn btn-warning" href="https://docs.microsoft.com/fr-fr/power-bi/create-reports/service-goals-introduction">Comment créer des objectifs</a></p>
+
+</div>
+
+
+
+<!-- JUMBOTRON -->
+<div class="bg-light p-2 p-md-5 rounded-lg mt-3">
+<img class="img img-fluid" src="./media/formation-learn.png"/>
+  <h1 class="display-4">Microsoft Learn</h1>
+  <p class="lead">Des parcours complet gratuits.</p>
+  <hr class="border-light my-4">
+  <p>Microsoft vous encourage à maîtriser ses outils avec ce splendid ensemble de ressources: vidéo, exemples, pas à pas.</p>
+  <a href="https://docs.microsoft.com/fr-fr/learn/powerplatform/power-bi">
+  <img class="img img-fluid" src="./media/rapports-learn.png"/>
+  </a>
+ 
+  <p class="mt-3">Des parcours de formations:</p>
+  <a href="https://docs.microsoft.com/fr-fr/learn/powerplatform/power-bi">
+  <img class="img img-fluid" src="./media/analytique-learn.png"/>
+  </a>
+  
+</div>
+
+
+
+
+
+</div> <!-- fin .container -->
+</body>
+</html>
