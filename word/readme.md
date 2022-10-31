@@ -77,5 +77,5 @@ Il faudra également rechercher un code génétique à mettre en gras.
 
 https://www.youtube.com/watch?v=XxrS3jZFQe0
 
-Fichier: https://github.com/fxpar/Cours/blob/main/word/d%C3%A9fi/D%C3%A9fi%20word%20g%C3%A9n%C3%A9tique%20-%20%C3%A9tudiant.txt
+Fichier: https://raw.githubusercontent.com/fxpar/Cours/main/word/d%C3%A9fi/D%C3%A9fi%20word%20g%C3%A9n%C3%A9tique%20-%20%C3%A9tudiant.txt
 
