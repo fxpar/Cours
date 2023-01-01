@@ -13,8 +13,8 @@ https://www.youtube.com/watch?v=oIgHLJuvEc8)
 https://www.youtube.com/watch?v=6Fbopge-wDc)
 
 ### Plan Automatique : 
-[![Plan Automatique](https://i.ytimg.com/vi/CUiLYgB7-Qo/hqdefault.jpg)](
-https://www.youtube.com/watch?v=CUiLYgB7-Qo)
+[![Plan Automatique](https://i.ytimg.com/vi/xA-AgRZxvcE/hqdefault.jpg)](
+https://www.youtube.com/watch?v=xA-AgRZxvcE)
 
 ### Lier 2 listes déroulantes : 
 [![Lier 2 listes déroulantes](https://i.ytimg.com/vi/CUiLYgB7-Qo/hqdefault.jpg)](
