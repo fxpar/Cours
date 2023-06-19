@@ -51,7 +51,24 @@ Le fichier de correction inclut des états avec différents groupements
 
 
 
+# SQL
 
+## Découverte
+Vidéo interactive avec mini quiz intégrés pour bien pratiquer.
+
+ [![sql découverte](https://raw.githubusercontent.com/fxpar/h5p-apps/main/apps/decouverte-sql/Image.png)](https://fxpar.github.io/h5p-apps/apps/decouverte-sql/)
+
+
+## Multi tables
+Vidéo interactive avec mini quiz intégrés pour bien pratiquer.
+
+
+ [![Sql Multi tables](https://raw.githubusercontent.com/fxpar/h5p-apps/main/apps/sql-multi-tables/Image.png)](https://fxpar.github.io/h5p-apps/apps/sql-multi-tables/)
+
+
+## Aide-mémoire jointures
+
+![jointures](https://github.com/fxpar/Cours/blob/main/access/jointures.png?raw=true)
 
 
 
