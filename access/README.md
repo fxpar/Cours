@@ -4,6 +4,8 @@ Vidéo et fichiers d'exercices pour Access par François Parlant.
 
 # Access Découverte: le cours complet
 
+Une longue vidéo déjà chapitrée à regarder en plusieurs fois pour avoir le panorama complet des possibilités d'Access.
+
 [![Formats et Formules de texte](https://i.ytimg.com/vi/-kgEwheLY4M/hqdefault.jpg)](
 https://www.youtube.com/watch?v=-kgEwheLY4M)
 
@@ -25,12 +27,16 @@ Fichier à télécharger: [selection.accdb](https://github.com/fxpar/Cours/raw/m
 
 
 * critères simples (égal, inférieur, supérieur, différent...)
-* critères complexes (entre, in, comme, pas, est null
-* requêtes paramétrée
+* critères complexes (entre, in, comme, pas, est null)
+* les formules et expressions
+* les regroupements
+* requêtes paramétrées
 
 
 
 # Requête paramétrée avec formulaire
+
+Créer un formulaire qui alimente une ou plusieurs requêtes pour éviter de retaper les critères, ou les choisir facilement dans une liste.
 
 [![Formats et Formules de texte](https://i.ytimg.com/vi/gS0wcWbw6Co/hqdefault.jpg)](
 https://www.youtube.com/watch?v=gS0wcWbw6Co)
@@ -39,6 +45,7 @@ https://www.youtube.com/watch?v=gS0wcWbw6Co)
 
 # Requête de non correspondance
 
+Afficher les données d'une table qui NE SONT PAS présentent dans une autre table
 [![Formats et Formules de texte](https://i.ytimg.com/vi/gPHnTbcwTtM/hqdefault.jpg)](
 https://www.youtube.com/watch?v=gPHnTbcwTtM)
 
@@ -49,6 +56,9 @@ https://www.youtube.com/watch?v=gPHnTbcwTtM)
 
 
 # Requête de mise à jour
+
+Modifier des données existantes avec une requête.
+
 [![Formats et Formules de texte](https://i.ytimg.com/vi/iNsyjBTWqIk/hqdefault.jpg)](
 https://www.youtube.com/watch?v=iNsyjBTWqIk)
 
@@ -56,10 +66,19 @@ https://www.youtube.com/watch?v=iNsyjBTWqIk)
 
 # Requête analyse croisée
 
+Afficher les résultats en colonnes et en ligne
+
 [![Formats et Formules de texte](https://i.ytimg.com/vi/pcGUqwRZsP8/hqdefault.jpg)](
 https://www.youtube.com/watch?v=pcGUqwRZsP8)
 
 Le fichier de correction inclut des états avec différents groupements: [analyse-croisee-correction.accdb](https://github.com/fxpar/Cours/raw/main/access/analyse-croisee-correction.accdb)
+
+# Requête UNION
+
+Comment ajouter des données les unes en dessous des autres.
+
+[![Formats et Formules de texte](https://i.ytimg.com/vi/CtjkSMYYVa4/hqdefault.jpg)](
+https://www.youtube.com/watch?v=CtjkSMYYVa4)
 
 
 
