@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    .vba-guide-container {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 950px;
+        margin: 20px auto;
+        padding: 25px;
+        border: 1px solid #d1d1d1;
+        border-radius: 10px;
+        background-color: #ffffff;
+    }
+    .vba-header {
+        background-color: #7b1fa2;
+        color: #ffffff;
+        padding: 25px;
+        border-radius: 8px 8px 0 0;
+        margin: -25px -25px 25px -25px;
+        text-align: center;
+    }
+    h2 {
+        color: #4a148c;
+        border-bottom: 3px solid #9c27b0;
+        padding-bottom: 8px;
+        margin-top: 40px;
+        text-transform: uppercase;
+        font-size: 1.4em;
+    }
+    h3 {
+        color: #6a1b9a;
+        margin-top: 25px;
+        border-left: 5px solid #9c27b0;
+        padding-left: 10px;
+    }
+    .code-block {
+        background-color: #1e1e1e;
+        color: #dcdcdc;
+        padding: 18px;
+        border-radius: 6px;
+        font-family: 'Consolas', 'Monaco', monospace;
+        overflow-x: auto;
+        margin: 15px 0;
+        border-left: 5px solid #9c27b0;
+    }
+    .method-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .method-table th, .method-table td {
+        border: 1px solid #dee2e6;
+        padding: 14px;
+        text-align: left;
+    }
+    .method-table th {
+        background-color: #f3e5f5;
+        color: #4a148c;
+        font-weight: bold;
+    }
+    .pro-tip {
+        background-color: #fff9c4;
+        border-left: 6px solid #fbc02d;
+        padding: 15px;
+        margin: 20px 0;
+    }
+    .expert-note {
+        background-color: #e1f5fe;
+        border-left: 6px solid #03a9f4;
+        padding: 15px;
+        margin: 20px 0;
+    }
+    .keyword { color: #569cd6; }
+    .comment { color: #6a9955; }
+    .string { color: #ce9178; }
+</style>
+</head>
+<body>
+
+<div class="vba-guide-container">
+    <div class="vba-header">
+        <h1>VBA Expert: Level 4 Study Guide</h1>
+        <p>Advanced Architecture, System Integration, and Expert Automation</p>
+    </div>
+
+    <p>Level 4 represents the expert tier of VBA. You will learn how to create tools that work globally across Excel, handle dynamic data structures, and build responsive, professional-grade interfaces.</p>
+
+    <h2>Module 1: Global Distribution & Security</h2>
+    <p>Experts create tools that aren't just for one workbook, but for the entire Excel environment.</p>
+    
+    <h3>Universal Macros</h3>
+    <ul>
+        <li><strong>PERSONAL.XLSB:</strong> Storing macros in this hidden personal workbook allows you to use them in any Excel file you open.</li>
+        <li><strong>Excel Add-ins (.xlam):</strong> Saving a workbook as an <code>.xlam</code> file and activating it as an Add-in is the professional way to distribute toolsets to other users.</li>
+        <li><strong>Exporting Modules:</strong> You can share code by exporting modules as <code>.bas</code> files via the File menu in the VBA Editor.</li>
+    </ul>
+
+    <h3>Security & Environment</h3>
+    <ul>
+        <li><strong>Protected Mode:</strong> A security setting that opens files in a restricted view. It can be triggered by files from the Internet, Outlook attachments, or untrusted locations.</li>
+        <li><strong>Private Modules:</strong> Use <code>Option Private Module</code> at the top of a module to prevent its macros from appearing in the standard Excel Macro dialog box, even if they aren't declared as <code>Private Sub</code>.</li>
+    </ul>
+
+    <h2>Module 2: Advanced Object Logic</h2>
+    <p>Deepening your understanding of Workbook and Range objects for more robust code.</p>
+
+    <table class="method-table">
+        <thead>
+            <tr>
+                <th>Object/Term</th>
+                <th>Expert Definition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>ThisWorkbook</code></td>
+                <td>Refers specifically to the workbook where the VBA code is currently running.</td>
+            </tr>
+            <tr>
+                <td><strong>Disjointed Ranges</strong></td>
+                <td>Use <code>Set MyRange = Range("A1, D5")</code> to select non-contiguous cells.</td>
+            </tr>
+            <tr>
+                <td><strong>Application Properties</strong></td>
+                <td>Properties like <code>ActiveCell</code>, <code>Addins</code>, and <code>Creator</code> are <strong>Read-Only</strong>.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="expert-note">
+        <strong>Dynamic Selections:</strong> To select a list from A3 to the last non-empty cell in column A, use:<br>
+        <code>Range("A3", Range("A3").End(xlDown)).Select</code>
+    </div>
+
+    <h2>Module 3: Advanced Syntax & Arrays</h2>
+    <p>Experts use dynamic variables and optimized logic structures to handle large datasets.</p>
+
+    <h3>Dynamic Arrays</h3>
+    <ul>
+        <li><strong>LBound / UBound:</strong> Use these to find the lower and upper boundaries of an array (e.g., <code>UBound(Tableau, 1)</code> gives the number of rows).</li>
+        <li><strong>Constants:</strong> Declare values that never change using the <code>Const</code> keyword (e.g., <code>Const TVA As Double = 0.2</code>).</li>
+    </ul>
+
+    <h3>Logical Efficiency</h3>
+    <div class="code-block">
+        <span class="comment">' One-line IF syntax</span><br>
+        <span class="keyword">If</span> x = 1 <span class="keyword">Then</span> y = <span class="keyword">True</span> <span class="keyword">Else</span> y = <span class="keyword">False</span><br><br>
+        <span class="comment">' Select Case (Best for multiple outcomes)</span><br>
+        <span class="keyword">Select Case</span> Range(<span class="string">"A1"</span>).Value<br>
+        &nbsp;&nbsp;<span class="keyword">Case</span> 1: MsgBox <span class="string">"One"</span><br>
+        &nbsp;&nbsp;<span class="keyword">Case Else</span>: MsgBox <span class="string">"Other"</span><br>
+        <span class="keyword">End Select</span>
+    </div>
+
+    <h2>Module 4: Event-Driven Programming</h2>
+    <p>Events allow code to run automatically when the user performs an action in Excel.</p>
+    
+    <ul>
+        <li><strong>Worksheet_Activate:</strong> Runs code whenever a specific tab is selected (e.g., to update a counter in cell A1).</li>
+        <li><strong>SheetChange:</strong> A workbook-level event that triggers whenever any cell in a worksheet is modified.</li>
+    </ul>
+
+    <h2>Module 5: Expert UserForms & ActiveX</h2>
+    <p>Level 4 focuses on creating sophisticated, non-blocking interfaces.</p>
+
+    <table class="method-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>Functionality</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Non-Modal (vbModeless)</strong></td>
+                <td>Allows the user to click and edit cells while the UserForm is still visible.</td>
+            </tr>
+            <tr>
+                <td><strong>RowSource</strong></td>
+                <td>A property that links a ComboBox or ListBox directly to a Range in a sheet.</td>
+            </tr>
+            <tr>
+                <td><strong>MultiPage Control</strong></td>
+                <td>Allows you to organize a single form into multiple tabs/sections.</td>
+            </tr>
+            <tr>
+                <td><strong>ToggleButton</strong></td>
+                <td>An ActiveX control that stays "pressed" or "released," often used for OUI/NON or ON/OFF toggles.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Module 6: Optimization & Debugging</h2>
+    <p>Writing code is easy; writing <em>fast</em> and <em>clean</em> code is the mark of an expert.</p>
+
+    <h3>Performance Boosters</h3>
+    <div class="pro-tip">
+        <strong>ScreenUpdating:</strong> Turn off the screen refresh at the start of long macros to significantly increase speed:<br>
+        <code>Application.ScreenUpdating = False</code> (Remember to set it back to <code>True</code> at the end).
+    </div>
+
+    <h3>Expert Tools</h3>
+    <ul>
+        <li><strong>Debug.Print:</strong> Sends a value to the "Immediate Window" (Ctrl+G) for tracking without interrupting the user with a MsgBox.</li>
+        <li><strong>Exit For:</strong> Used to exit a loop prematurely once a condition is met (e.g., once you find a specific value, stop searching).</li>
+        <li><strong>Object Browser (F2):</strong> The expert’s dictionary for exploring every available class, property, and method in VBA.</li>
+    </ul>
+
+    <p style="text-align: center; margin-top: 40px; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px;">
+        <em>Final Expert Module - Congratulations on reaching Level 4!</em>
+    </p>
+</div>
+
+</body>
+</html>

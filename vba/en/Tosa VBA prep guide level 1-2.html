@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    .vba-guide-container {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #e1e1e1;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+    .vba-header {
+        background-color: #2c3e50;
+        color: white;
+        padding: 20px;
+        border-radius: 6px 6px 0 0;
+        margin: -20px -20px 20px -20px;
+        text-align: center;
+    }
+    h2 {
+        color: #2980b9;
+        border-bottom: 2px solid #2980b9;
+        padding-bottom: 5px;
+        margin-top: 30px;
+    }
+    h3 {
+        color: #16a085;
+        margin-top: 20px;
+    }
+    .code-block {
+        background-color: #282c34;
+        color: #abb2bf;
+        padding: 15px;
+        border-radius: 5px;
+        font-family: 'Courier New', Courier, monospace;
+        overflow-x: auto;
+        margin: 10px 0;
+    }
+    .method-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 15px 0;
+        background-color: white;
+    }
+    .method-table th, .method-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+    }
+    .method-table th {
+        background-color: #ecf0f1;
+        color: #2c3e50;
+    }
+    .important-note {
+        background-color: #fff3cd;
+        border-left: 5px solid #ffecb5;
+        padding: 15px;
+        margin: 20px 0;
+        font-style: italic;
+    }
+    .citation {
+        font-size: 0.85em;
+        color: #7f8c8d;
+        vertical-align: super;
+    }
+</style>
+</head>
+<body>
+
+<div class="vba-guide-container">
+    <div class="vba-header">
+        <h1>VBA Certification Prep Guide</h1>
+        <p>Levels 1 & 2: Fundamentals to Automation</p>
+    </div>
+
+    <p>This guide prepares you for the VBA Level 1 and 2 certification by covering core syntax, data management, and user interface design.</p>
+
+    <h2>Module 1: The VBA Environment & Basic Syntax</h2>
+    
+    <h3>Code Organization</h3>
+    <ul>
+        <li><strong>Modules:</strong> You must create a module to store your procedures.</li>
+        <li><strong>Procedures (Sub):</strong> Used to perform actions.</li>
+        <li><strong>Functions:</strong> Used to calculate and return specific values.</li>
+    </ul>
+
+    <h3>Best Practices</h3>
+    <ul>
+        <li><strong>Comments:</strong> Use an apostrophe (<strong>'</strong>) to insert a comment. Anafter the apostrophe is ignored by the code.</li>
+        <li><strong>Option Explicit:</strong> Placed at the very top of a module, this instruction forces the developer to declare all variables, preventing typos and errors.</li>
+        <li><strong>Environment:</strong> Use <code>ChDir</code> to change the current active folder during macro execution.</li>
+    </ul>
+
+    <h2>Module 2: Variables and Data Types</h2>
+    <p>Choosing the correct data type ensures your code runs efficiently and handles the correct range of numbers.</p>
+
+    <table class="method-table">
+        <thead>
+            <tr>
+                <th>Data Type</th>
+                <th>Usage</th>
+                <th>Capacity / Range</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Integer</strong></td>
+                <td>Small whole numbers.</td>
+                <td>-32,768 to 32,767.</td>
+            </tr>
+            <tr>
+                <td><strong>Long</strong></td>
+                <td>Large whole numbers.</td>
+                <td>Use this for values like 100,000.</td>
+            </tr>
+            <tr>
+                <td><strong>String</strong></td>
+                <td>Text variables.</td>
+                <td>Alphanumeric characters.</td>
+            </tr>
+          <tr>
+                <td><strong>Single</strong></td>
+                <td>Decimal numbers with few decimals.</td>
+                <td>10.87</td>
+            </tr>
+          <tr>
+                <td><strong>Double</strong></td>
+                <td>Decimal with many decimals</td>
+                <td>3.1415926535</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Variable Declaration Example</h3>
+    <div class="code-block">
+        <span style="color: #c678dd;">Dim</span> Nom <span style="color: #c678dd;">As String</span>, Montant <span style="color: #c678dd;">As Long</span> <span style="color: #5c6370;">' Declaring text and a large number </span>
+    </div>
+
+    <h2>Module 3: Range Manipulation</h2>
+    <p>Interacting with cells is the primary function of Excel VBA.</p>
+
+    <h3>Selection Syntax</h3>
+    <ul>
+        <li>Direct selection: <code>Range("A1:B5").Select</code>.</li>
+        <li>Variable-based selection: <code>Total = "A1:B5"</code> followed by <code>Range(Total).Select</code>.</li>
+    </ul>
+
+    <h3>Methods to Clear or Delete Cells</h3>
+    <table class="method-table">
+        <thead>
+            <tr>
+                <th>Method</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><code>.Clear</code></td>
+                <td>Removes both content and formatting.</td>
+            </tr>
+            <tr>
+                <td><code>.ClearContents</code></td>
+                <td>Removes only the data (text/numbers).</td>
+            </tr>
+            <tr>
+                <td><code>.ClearFormats</code></td>
+                <td>Removes only the formatting (colors, borders).</td>
+            </tr>
+            <tr>
+                <td><code>.ClearComments</code></td>
+                <td>Removes only the cell comments.</td>
+            </tr>
+            <tr>
+                <td><code>.Delete</code></td>
+                <td>Removes the entire range/cells from the sheet[cite: 2, 9].</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Module 4a: Control Structures (IF)</h2>
+
+  <h3>Conditional Logic (If...Then...Else)</h3>
+    <p>Conditional statements allow your macro to make decisions and execute specific blocks of code only when certain criteria are met.</p>
+    
+    <ul>
+        <li><strong>If...Then:</strong> Performs an action only if a condition is true[cite: 3].</li>
+        <li><strong>Else:</strong> Provides an alternative action if the condition is false[cite: 4].</li>
+        <li><strong>End If:</strong> Every <code>If</code> block must be closed with an <code>End If</code> statement to define the end of the logic[cite: 4].</li>
+    </ul>
+
+    <h3>Conditional Example</h3>
+    <p>Using the logic for the "Montant" variable (Integer vs. Long), we can check if a value exceeds the standard Integer limit of 32,767[cite: 2, 3]:</p>
+    
+    <div class="code-block">
+        <span style="color: #c678dd;">If</span> Montant > 32767 <span style="color: #c678dd;">Then</span><br>
+        &nbsp;&nbsp;<span style="color: #5c6370;">' If the amount is large, we treat it as a Long [cite: 4]</span><br>
+        &nbsp;&nbsp;MsgBox "This value requires a Long data type." [cite: 5]<br>
+        <span style="color: #c678dd;">Else</span><br>
+        &nbsp;&nbsp;MsgBox "This value fits within an Integer range." [cite: 2]<br>
+        <span style="color: #c678dd;">End If</span>
+    </div>
+
+    <div class="important-note">
+        <strong>Important:</strong> When checking ranges, ensure your variables are declared correctly. For example, a variable for an integer between 5,000 and 100,000 must be declared as <code>Long</code>, not <code>Integer</code>, because it exceeds 32,767[cite: 2, 3, 4].
+    </div>
+  <h2>Module 4b: Control Structures (Loops)</h2>
+    <p>Loops allow you to repeat an action multiple times based on a specific logic.</p>
+    
+    <h3>For...Next with Step</h3>
+    <p>The <code>Step</code> keyword determines how the counter increases with each loop.</p>
+    <div class="code-block">
+        <span style="color: #c678dd;">For</span> x = 1 <span style="color: #c678dd;">To</span> 14 <span style="color: #c678dd;">Step</span> 3<br>
+        &nbsp;&nbsp;<span style="color: #5c6370;">' Values of x will be: 1, 4, 7, 10, 13 </span><br>
+        <span style="color: #c678dd;">Next</span> x
+    </div>
+
+    <h2>Module 5: User Interaction & Forms</h2>
+    
+    <h3>Message Boxes</h3>
+    <p>Use the <code>MsgBox</code> function to display results or alerts to the user.</p>
+
+  <h3>Input Boxes</h3>
+    <p>While a <code>MsgBox</code> is used to display information or results to the user, an <code>InputBox</code> is used to <strong>collect</strong> information from them during the macro's execution.</p>
+    
+    <ul>
+        <li><strong>Interaction:</strong> It opens a dialog box with a text field, allowing the user to provide data.</li>
+        <li><strong>Capturing Data:</strong> The information entered by the user is typically stored in a variable, such as a <code>String</code>, so your code can process it later.</li>
+    </ul>
+
+    <h3>InputBox Example</h3>
+    <div class="code-block">
+        <span style="color: #c678dd;">Dim</span> UserInput <span style="color: #c678dd;">As String</span> <span style="color: #5c6370;">' Declare variable to hold input </span><br>
+        UserInput = InputBox("Please enter your department name:")<br><br>
+        <span style="color: #5c6370;">' Confirming the input using a MsgBox </span><br>
+        MsgBox "Data recorded for: " & UserInput 
+    </div>
+
+      <h3>UserForms</h3>
+    <ul>
+        <li><strong>Display:</strong> Use the <code>.Show</code> method to display a form (e.g., <code>UserForm1.Show</code>).</li>
+        <li><strong>Initialize Event:</strong> Use the <code>Initialize</code> event to define properties of objects (like textboxes or labels) as soon as the form is opened.</li>
+    </ul>
+
+    <h2>Module 6: Automation & Triggers</h2>
+    <p>You can make macros easy to execute through several interface methods:</p>
+    <ul>
+        <li><strong>Keyboard Shortcut:</strong> Assign a specific key combination.</li>
+        <li><strong>Quick Access Toolbar:</strong> Add a button that can be restricted to just that specific workbook.</li>
+        <li><strong>Ribbon:</strong> Add a button directly to the Excel tabs.</li>
+        <li><strong>Shapes:</strong> Assign a macro to a drawn shape (like a circle or square) so it runs when clicked.</li>
+    </ul>
+
+    <div class="important-note">
+        <strong>Pro Tip:</strong> Charts linked to an official Excel "Table" (ListObject) update automatically when new data is added, meaning no VBA code is required for that specific task.
+    </div>
+
+    <p style="text-align: center; margin-top: 40px; color: #7f8c8d;"><em>End of Study Support - Good luck with your certification!</em></p>
+</div>
+
+</body>
+</html>
